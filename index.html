@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        svg {
+            filter: drop-shadow(0 10px 30px rgba(255, 68, 68, 0.4));
+        }
+
+        .logo-text {
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 300px;
+                height: 300px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
+            .tagline {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .variants {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+        }
+
+        .variant {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 68, 68, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .variant:hover {
+            border-color: rgba(255, 68, 68, 0.6);
+            transform: translateY(-5px);
+        }
+
+        .variant svg {
+            width: 150px;
+            height: 150px;
+        }
+
+        .variant h3 {
+            color: #ff4444;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main barbell -->
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#666;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#999;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#666;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Left weight plates -->
+                <ellipse cx="80" cy="200" rx="35" ry="60" fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
+                <ellipse cx="90" cy="200" rx="30" ry="55" fill="url(#grad1)" stroke="#fff" stroke-width="3"/>
+
+                <!-- Right weight plates -->
+                <ellipse cx="320" cy="200" rx="35" ry="60" fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
+                <ellipse cx="310" cy="200" rx="30" ry="55" fill="url(#grad1)" stroke="#fff" stroke-width="3"/>
+
+                <!-- Bar -->
+                <rect x="110" y="190" width="180" height="20" fill="url(#grad2)" rx="10"/>
+
+                <!-- Center grip -->
+                <rect x="180" y="185" width="40" height="30" fill="#333" stroke="#ff4444" stroke-width="2" rx="3"/>
+                <line x1="190" y1="185" x2="190" y2="215" stroke="#ff4444" stroke-width="1"/>
+                <line x1="200" y1="185" x2="200" y2="215" stroke="#ff4444" stroke-width="1"/>
+                <line x1="210" y1="185" x2="210" y2="215" stroke="#ff4444" stroke-width="1"/>
+
+                <!-- Weight collars -->
+                <rect x="105" y="188" width="12" height="24" fill="#ff4444" rx="2"/>
+                <rect x="283" y="188" width="12" height="24" fill="#ff4444" rx="2"/>
+
+                <!-- Decorative elements -->
+                <circle cx="200" cy="200" r="90" fill="none" stroke="#ff4444" stroke-width="2" opacity="0.3" stroke-dasharray="5,5"/>
+                <circle cx="200" cy="200" r="110" fill="none" stroke="#ff4444" stroke-width="1" opacity="0.2" stroke-dasharray="10,10"/>
+            </svg>
+        </div>
+
+        <div class="logo-text">
+            <h1>IRON GYM</h1>
+            <p class="tagline">No Pain No Gain</p>
+        </div>
+
+        <div class="variants">
+            <div class="variant">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Minimal version -->
+                    <defs>
+                        <linearGradient id="minGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="40" cy="100" rx="20" ry="35" fill="url(#minGrad)"/>
+                    <ellipse cx="160" cy="100" rx="20" ry="35" fill="url(#minGrad)"/>
+                    <rect x="50" y="95" width="100" height="10" fill="#999" rx="5"/>
+                    <rect x="95" y="92" width="10" height="16" fill="#ff4444" rx="1"/>
+                </svg>
+                <h3>Minimal</h3>
+            </div>
+
+            <div class="variant">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Kettlebell version -->
+                    <defs>
+                        <linearGradient id="ketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#880000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="70" y="50" width="60" height="20" fill="url(#ketGrad)" rx="10"/>
+                    <circle cx="100" cy="120" r="50" fill="url(#ketGrad)" stroke="#fff" stroke-width="3"/>
+                    <circle cx="100" cy="120" r="35" fill="none" stroke="#fff" stroke-width="2" opacity="0.5"/>
+                </svg>
+                <h3>Kettlebell</h3>
+            </div>
+
+            <div class="variant">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dumbbell version -->
+                    <defs>
+                        <linearGradient id="dumGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="20" y="85" width="25" height="30" fill="url(#dumGrad)" rx="3"/>
+                    <rect x="155" y="85" width="25" height="30" fill="url(#dumGrad)" rx="3"/>
+                    <rect x="45" y="95" width="110" height="10" fill="#666" rx="5"/>
+                    <line x1="45" y1="97" x2="155" y2="97" stroke="#ff4444" stroke-width="1"/>
+                    <line x1="45" y1="103" x2="155" y2="103" stroke="#ff4444" stroke-width="1"/>
+                </svg>
+                <h3>Dumbbell</h3>
+            </div>
+
+            <div class="variant">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Power fist version -->
+                    <defs>
+                        <linearGradient id="fistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff4444;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#aa0000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Fist shape -->
+                    <ellipse cx="100" cy="120" rx="35" ry="45" fill="url(#fistGrad)"/>
+                    <rect x="70" y="80" width="15" height="30" fill="url(#fistGrad)" rx="7"/>
+                    <rect x="85" y="70" width="15" height="35" fill="url(#fistGrad)" rx="7"/>
+                    <rect x="100" y="75" width="15" height="35" fill="url(#fistGrad)" rx="7"/>
+                    <rect x="115" y="80" width="15" height="30" fill="url(#fistGrad)" rx="7"/>
+                    <!-- Lightning bolt -->
+                    <polygon points="95,40 85,60 95,60 90,75 105,55 95,55 100,40" fill="#fff" opacity="0.9"/>
+                </svg>
+                <h3>Power</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
